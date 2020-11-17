@@ -9,7 +9,7 @@ textarea{
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
+  border-left: 7px solid black;
   padding: 10px;
 }
 
@@ -23,6 +23,15 @@ textarea{
 
 .description{
   white-space: pre-wrap;
+  padding: 0;
+
+  text-align: start;
+  /* position:relative;
+  top:-5px; */
+  background-color: #9e77dd;
+  /* vertical-align: top; */
+  height: 95%;
+  
 }
 
 .time-block{
@@ -32,7 +41,7 @@ textarea{
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
+  /* height: 80px; */
   border-top: 1px solid white;;
 }
 
