@@ -1,15 +1,21 @@
-body {
+.body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
+.form-group{
+  width: 90%;
+  margin: 0 10px 0 10px;
+  align-self: center;
+}
 
-textarea{
+.textarea,
+.form-control{
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
-  border-left: 7px solid black;
+  border-left: 1px solid black;
   padding: 10px;
 }
 
@@ -42,7 +48,7 @@ textarea{
 .row {
   white-space: pre-wrap;
   /* height: 80px; */
-  border-top: 1px solid white;;
+  border-top: 3px solid white;;
 }
 
 .hour {
