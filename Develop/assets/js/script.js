@@ -1,4 +1,14 @@
-
+var timeEntry = {
+    9: [],
+    10: [],
+    11: [],
+    12: [],
+    13: [],
+    14: [],
+    15: [],
+    16: [],
+    17: []
+};
 
 // ----------------------------------------- Display the Current Date -----------------------------------------
 var currentDate = moment().format('dddd, LL');
@@ -35,10 +45,6 @@ var auditEntry = function() {
             console.log(check + "later");
             $(this).addClass("future");
         }
-        // else if (check == time){
-        //     console.log(check + "current");
-        //     $(this).addClass("present");
-        // }
     });
     console.log(idVal);
 }
@@ -47,13 +53,40 @@ var auditEntry = function() {
 //textarea
 $(".textarea").on("click", function() {
     var text = $.trim($(this).val());
-    console.log(text);    
+    console.log(text);
+    var idText = $(this).attr("id");
+    console.log(idText);
+
+    //saveTimeEntry(text, idText);
+})
+
+// ----------------------------------------- Save Time Entry Text -----------------------------------------
+var saveTimeEntry = function(text, idText) {
+    console.log("incoming text information: " + text);
+    timeEntry[idText] = text;
+
+    localStorage.setItem("timeEntry", JSON.stringify(timeEntry));
+    console.log(timeEntry);
+};
+
+// ----------------------------------------- Save buttons -----------------------------------------
+$(".saveBtn").click(function() {
+    var idButton = $(this).attr("id");
+    console.log(idButton + "button Pressed!");
+
+    //var timeText = $("button.saveBtn").prev().attr("id");
+    var timeTextId = $(this).prev().attr("id");
+    console.log("sibling id; " + timeTextId);
+    var timeTextData = $(this).prev().val();
+    console.log("Sibling text: " + timeTextData);
+    
+    saveTimeEntry(timeTextData, timeTextId);
+
 })
 
 
 
-
-
+// ----------------------------------------- Load Time Entry Text -----------------------------------------
 
 
 auditEntry();
