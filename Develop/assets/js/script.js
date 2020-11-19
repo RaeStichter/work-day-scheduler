@@ -8,8 +8,8 @@ $("#currentDay").text(currentDate);
 // ----------------------------------------- Color change Time -----------------------------------------
 //
 var auditEntry = function() {
-    //var time = moment().hour(); // this will gove only the hour of the time in 24hr format
-    var time = 10; //this is for testing only
+    var time = moment().hour(); // this will gove only the hour of the time in 24hr format
+    //var time = 10; //this is for testing only
     console.log(time);
 
     var idVal = [];
@@ -45,6 +45,10 @@ var auditEntry = function() {
 
 // ----------------------------------------- Edit Time Entry Text -----------------------------------------
 //textarea
+$(".textarea").on("click", function() {
+    var text = $.trim($(this).val());
+    console.log(text);    
+})
 
 
 
