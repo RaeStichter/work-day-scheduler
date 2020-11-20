@@ -5,8 +5,8 @@ $("#currentDay").text(currentDate); // set id to the current date to display in 
 // ----------------------------------------- Color change Time -----------------------------------------
 // change the color of the row/time elements based on whether they are in the past, present or future.
 var auditEntry = function() {
-    //var time = moment().hour(); // this will gove only the hour of the time in 24hr format
-    var time = 12; //this is for testing only
+    var time = moment().hour(); // this will gove only the hour of the time in 24hr format
+    //var time = 12; //this is for testing only
    
     // get all of the child text areas of the parent div
     var rowInfo = $("div.row > textarea");
