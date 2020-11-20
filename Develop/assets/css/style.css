@@ -3,11 +3,11 @@ body {
   font-size: 16px;
   line-height: 1;
 }
-.form-group{
+/* .form-group{
   width: 90%;
   margin: 0 10px 0 10px;
   align-self: center;
-}
+} */
 
 .textarea{
   background: transparent;
@@ -43,14 +43,8 @@ body {
 .description{
   white-space: pre-wrap;
   padding: 0;
-
   text-align: start;
-  /* position:relative;
-  top:-5px; */
-  background-color: #9e77dd;
-  /* vertical-align: top; */
-  height: 95%;
-  
+   height: 95%;
 }
 
 .time-block{
